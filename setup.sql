@@ -1,3 +1,14 @@
 DROP DATABASE IF EXISTS passwords;
 
 CREATE DATABASE passwords;
+
+USE passwords;
+
+CREATE TABLE IF NOT EXISTS users (
+  user_id INT NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  username VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  PRIMARY KEY (user_id)
+);
