@@ -12,3 +12,10 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(100) NOT NULL,
   PRIMARY KEY (user_id)
 );
+
+CREATE TABLE IF NOT EXISTS websites (
+  site_id INT NOT NULL AUTO_INCREMENT,
+  site_url VARCHAR(255) NOT NULL,
+  site_name VARCHAR(100) NOT NULL,
+  PRIMARY KEY (site_id)
+);
