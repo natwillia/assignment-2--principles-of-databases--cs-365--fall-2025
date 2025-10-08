@@ -69,7 +69,7 @@ VALUES
   (1, 1, AES_ENCRYPT('ebaypass1', @key_str, @init_vector), 'Ebay login'),
   (2, 2, AES_ENCRYPT('mgmsecure', @key_str, @init_vector), 'MGM Plus subscription'),
   (3, 3, AES_ENCRYPT('letterboxd123', @key_str, @init_vector), 'Review movies'),
-  (4, 4, AES_ENCRYPT('foodiepass', @key_str, @init_vector), 'Recipe ideas'),
+  (4, 4, AES_ENCRYPT('foodpass', @key_str, @init_vector), 'Recipe ideas'),
   (5, 5, AES_ENCRYPT('yt123', @key_str, @init_vector), 'YouTube login'),
   (6, 6, AES_ENCRYPT('starzwatch', @key_str, @init_vector), 'Starz login'),
   (7, 7, AES_ENCRYPT('paramountpw', @key_str, @init_vector), 'Paramount Plus login'),
