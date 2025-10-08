@@ -11,6 +11,14 @@ INSERT INTO accounts (user_id, site_id, password, comment)
 VALUES
   (11, 11, AES_ENCRYPT('batdance123', @key_str, @init_vector),'News about myself, Batman');
 
+-- 2: Get the password associated with the URL of one of your ten entries
+
+-- Using CAST to ensure decrypted eBay password is readable
+SELECT CAST(AES_DECRYPT(password, @key_str, @init_vector) AS CHAR) AS decrypted_password
+FROM accounts
+WHERE site_id = (
+  SELECT site_id FROM websites WHERE site_url = 'https://www.ebay.com/');
+
 -- 4: Change the Letterboxd URL associated with a password
 UPDATE websites
 SET site_url = 'https://letterboxd.com/journal/'
