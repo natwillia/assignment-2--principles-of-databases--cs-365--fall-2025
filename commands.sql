@@ -14,7 +14,7 @@ VALUES
 
 -- 2: Get the password associated with the URL of one of your ten entries
 
--- Using CAST to ensure decrypted eBay password is readable
+-- Using CAST to ensure decrypted mgm plus password is readable
 SELECT CAST(AES_DECRYPT(password, @key_str, @init_vector) AS CHAR) AS decrypted_password
 FROM accounts
 WHERE site_id = (
